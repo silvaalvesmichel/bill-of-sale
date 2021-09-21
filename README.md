@@ -1,4 +1,4 @@
-Itens Detalahdos que foram desenvolvidos:
+Itens Detalhados que foram desenvolvidos:
 Nesta API temos 5 entidades principais: usuários, receitas, despesas, empresas e categorias. A relacionamento foi feita da seguinte forma:
 Usuário pode cadastrar inúmeras despesas e receitas;
 Uma receita sempre está vinculada a uma empresa;
