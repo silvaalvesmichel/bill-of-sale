@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "3a819b5d-173e-4301-8f84-7bf28864e8ac",
+		"name": "bill of sale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\" : \"snopbsb@gmail.com\",\n\"password\" : \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saver user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"michel\",\n    \"email\":\"snopbsb@gmail.com\",\n    \"password\":\"12345\",\n    \"passwordConfirmation\":\"12345\",\n    \"cnpj\":\"21.834.322/0001-06\",\n    \"companyName\":\"Vibbra\",\n    \"phoneNumber\": \"61999999999\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDE2MjM2OX0.009FOJJBRc385ZcQTko4_yw_2FHB1nDdM4CvnpvKWHTMTdaqLX-nPLqR1od0d7or2HYTk5O7AaJNLDwBMqoMEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert revenue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDI0NDEwNH0.HPME367kGBdLhzV0nHwmxeyvnKvOPW9GwrSxMv1r07JmC9hzfhmmpt_cSVRBrA-AjXgoQ-q23EBvUSfh06TEig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"amount\": 1, \n\"invoice_id\": \"TESTE\", \n\"description\": \"TESTE\", \n\"accrual_date\": \"2021-08-27T00:00:00.511Z\", \n\"transaction_date\": \"2021-08-27T00:00:00.511Z\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/revenues/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"revenues",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update revenues",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDE3NzY2Mn0.R3v_e9R6MUBBCf8kINEnSb5KktsEb3429S1AOAPe1FItuQ--4F-3Um__Z3NcFlAkPNVrzOPkN0E9CR8Tvrai8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"amount\": 1, \n\"invoice_id\": \"TESTE\", \n\"description\": \"TESTE\", \n\"accrual_date\": \"2021-08-27T00:00:00.511Z\", \n\"transaction_date\": \"2021-08-27T00:00:00.511Z\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/revenues/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"revenues",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert customers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDI0OTUzNX0.0_mtPjQ-unv6zI0RFMHVnsE9XwwIcVQ5txv90dIzWjjRpJ6DNodqCgHf6SXhs8g7aQPHAItJnLVJirEINqcXvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\"cnpj\": \"30.570.077/0001-68\", \n\"commercial_name\": \"teste\", \n\"legal_name\": \"legal name\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getcustomers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDI0OTUzNX0.0_mtPjQ-unv6zI0RFMHVnsE9XwwIcVQ5txv90dIzWjjRpJ6DNodqCgHf6SXhs8g7aQPHAItJnLVJirEINqcXvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/customers?name=teste&cnpj=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "teste"
+						},
+						{
+							"key": "cnpj",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "total-revenue",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDI0OTUzNX0.0_mtPjQ-unv6zI0RFMHVnsE9XwwIcVQ5txv90dIzWjjRpJ6DNodqCgHf6SXhs8g7aQPHAItJnLVJirEINqcXvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fiscal_year\":2021\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reports/total-revenue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reports",
+						"total-revenue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "revenue-by-month",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDI0OTUzNX0.0_mtPjQ-unv6zI0RFMHVnsE9XwwIcVQ5txv90dIzWjjRpJ6DNodqCgHf6SXhs8g7aQPHAItJnLVJirEINqcXvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fiscal_year\":2021\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reports/revenue-by-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reports",
+						"revenue-by-month"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "revenue-by-customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDI0OTUzNX0.0_mtPjQ-unv6zI0RFMHVnsE9XwwIcVQ5txv90dIzWjjRpJ6DNodqCgHf6SXhs8g7aQPHAItJnLVJirEINqcXvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fiscal_year\":2021\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/reports/revenue-by-customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"reports",
+						"revenue-by-customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbm9wYnNiQGdtYWlsLmNvbSIsImV4cCI6MTYzMDI0OTUzNX0.0_mtPjQ-unv6zI0RFMHVnsE9XwwIcVQ5txv90dIzWjjRpJ6DNodqCgHf6SXhs8g7aQPHAItJnLVJirEINqcXvg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\"cnpj\": \"30.570.077/0001-68\", \n\"commercial_name\": \"teste\", \n\"legal_name\": \"legal name\" ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/customers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
